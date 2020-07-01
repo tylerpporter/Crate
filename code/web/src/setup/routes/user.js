@@ -3,7 +3,9 @@ import Login from '../../modules/user/Login'
 import Signup from '../../modules/user/Signup'
 import Profile from '../../modules/user/Profile'
 import Subscriptions from '../../modules/user/Subscriptions'
-//import StylePreference from '../../modules/user/StylePreference'
+
+/* Importing StylePreference Component to be rendered when route is directed to StylePreference */
+// import StylePreference from '../../modules/user/StylePreference'
 
 
 // User routes
@@ -30,7 +32,8 @@ export default {
     auth: true
   }
 }
-// Need to make route to user style prferences page
+
+/* Need to make route to user style prferences page */
 
 // style-preference: {
 //   path: '/user/style-preference',
@@ -38,4 +41,4 @@ export default {
 //   auth: true
 // }
 
-// Need make StylePreference Component to the directory of ../../pages/StylePreference.js
+/* Need make StylePreference Component to the directory of ../../pages/StylePreference.js */
