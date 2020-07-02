@@ -32,7 +32,6 @@ class Related extends PureComponent {
 
   render() {
     const { isLoading, list } = this.props.productsRelated
-
     return (
       <div>
         {/* Related product list */}
@@ -40,7 +39,7 @@ class Related extends PureComponent {
           {
             isLoading
               ? <Loading />
-              : list.length > 0
+              : list != null && list.length > 0
                 ? list.map(product => (
                     <GridCell key={product.id} style={{ textAlign: 'center' }}>
                       <ProductItem product={product}/>
