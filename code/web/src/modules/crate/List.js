@@ -1,31 +1,33 @@
+/* list of all crate options */
+
 // Imports
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { Helmet } from 'react-helmet'
+import React, { PureComponent } from "react"; // use PureComponent when a component could re-render even if it had the same props and state
+// ex: when a parent component had to re-render but the child component props and state didn't change, child component could benefit from PureComponent
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Helmet } from "react-helmet";
 
 // UI Imports
-import { Grid, GridCell } from '../../ui/grid'
-import { H3 } from '../../ui/typography'
-import { grey, grey2 } from '../../ui/common/colors'
+import { Grid, GridCell } from "../../ui/grid";
+import { H3 } from "../../ui/typography";
+import { grey, grey2 } from "../../ui/common/colors";
 
 // App Imports
-import { getList as getCratesList } from './api/actions'
-import Loading from '../common/Loading'
-import EmptyMessage from '../common/EmptyMessage'
-import CrateItem from './Item'
+import { getList as getCratesList } from "./api/actions";
+import Loading from "../common/Loading";
+import EmptyMessage from "../common/EmptyMessage";
+import CrateItem from "./Item";
 
 // Component
 class List extends PureComponent {
-
   // Runs on server only for SSR
   static fetchData({ store }) {
-    return store.dispatch(getCratesList('ASC'))
+    return store.dispatch(getCratesList("ASC"));
   }
 
   // Runs on client only
   componentDidMount() {
-    this.props.getCratesList('ASC')
+    this.props.getCratesList("ASC");
   }
 
   render() {
@@ -38,46 +40,48 @@ class List extends PureComponent {
 
         {/* Top title bar */}
         <Grid style={{ backgroundColor: grey }}>
-          <GridCell style={{ padding: '2em', textAlign: 'center' }}>
+          <GridCell style={{ padding: "2em", textAlign: "center" }}>
             <H3 font="secondary">Crates for everyone!</H3>
 
-            <p style={{ marginTop: '1em', color: grey2 }}>You can choose crate which suits your need. You can also
-              subscribe to multiple crates.</p>
+            <p style={{ marginTop: "1em", color: grey2 }}>
+              You can choose crate which suits your need. You can also subscribe
+              to multiple crates.
+            </p>
           </GridCell>
         </Grid>
 
         {/* Crate list */}
         <Grid>
           <GridCell>
-            {
-              this.props.crates.isLoading
-                ? <Loading/>
-                : this.props.crates.list.length > 0
-                    ? this.props.crates.list.map(crate => (
-                      <div key={crate.id} style={{ margin: '2em', float: 'left' }}>
-                        <CrateItem crate={crate}/>
-                      </div>
-                    ))
-                    : <EmptyMessage message="No crates to show" />
-            }
+            {this.props.crates.isLoading ? (
+              <Loading />
+            ) : this.props.crates.list.length > 0 ? (
+              this.props.crates.list.map((crate) => (
+                <div key={crate.id} style={{ margin: "2em", float: "left" }}>
+                  <CrateItem crate={crate} />
+                </div>
+              ))
+            ) : (
+              <EmptyMessage message="No crates to show" />
+            )}
           </GridCell>
         </Grid>
       </div>
-    )
+    );
   }
 }
 
 // Component Properties
 List.propTypes = {
   crates: PropTypes.object.isRequired,
-  getCratesList: PropTypes.func.isRequired
-}
+  getCratesList: PropTypes.func.isRequired,
+};
 
 // Component State
 function listState(state) {
   return {
-    crates: state.crates
-  }
+    crates: state.crates,
+  };
 }
 
-export default connect(listState, { getCratesList })(List)
+export default connect(listState, { getCratesList })(List);
