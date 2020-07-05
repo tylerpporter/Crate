@@ -1,0 +1,15 @@
+Starting at the database level, we will need to create a 'styles' table. That
+table will need to have a 'has many' relationship with 'users' and a user will
+belong to a style. We will need to add a 'style-id' column on the 'users' table.
+
+Here are the files that need to be created/modified:
+ .src/migrations/5-styles.js
+ .src/migrations/add-styleId-to-users.js
+ .src/modules/style.js
+ .src/seeders/4-styles.js
+
+Not certain how to query/display this new table in GraphQL just yet. Eventually,
+a .src/modules/style folder will need to be created and in that folder should live
+the .js files model, mutations, query, resolvers, and types.
+
+In the meantime, I have created a `Tests` table to practice working with the database. 
