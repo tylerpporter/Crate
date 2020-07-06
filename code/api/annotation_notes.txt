@@ -12,4 +12,6 @@ Not certain how to query/display this new table in GraphQL just yet. Eventually,
 a .src/modules/style folder will need to be created and in that folder should live
 the .js files model, mutations, query, resolvers, and types.
 
-In the meantime, I have created a `Tests` table to practice working with the database. 
+In the meantime, I have created a `Tests` table to practice working with the database.
+
+Styles table will have a name column and an image path column 
