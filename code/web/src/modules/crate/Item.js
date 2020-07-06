@@ -77,7 +77,9 @@ class Item extends PureComponent {
           <p style={{ textAlign: 'center', marginTop: '1.5em', marginBottom: '1em' }}>
             <Button
               theme="primary"
-              onClick={this.onClickSubscribe.bind(this, id)}
+              onClick={this.onClickSubscribe.bind(this, id)}  
+              // {/* modify this button to link to style preference page instead of subscription page */}
+              // {/* Pass in props of crate ID to style preference page to render correct items of specific crate selection */}
               type="button"
               disabled={ isLoading }
             >

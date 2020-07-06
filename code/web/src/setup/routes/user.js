@@ -35,9 +35,9 @@ export default {
 
 /* Need to make route to user style prferences page */
 
-// style-preference: {
-//   path: '/user/style-preference',
-//   component: StylePreference,
+// style-preference: {                  // Method will call for this route
+//   path: '/user/style-preference',    // the route path to the style preference page
+//   component: StylePreference,        // the component/container for the style preferene display
 //   auth: true
 // }
 
