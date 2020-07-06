@@ -19,6 +19,8 @@ import Menu from './Menu'
 import MenuItem from './MenuItem'
 
 // Component
+// stateless functional component renders navigation links to other pages
+// rendered on every page
 const Header = (props) => {
   return (
     <header style={{
