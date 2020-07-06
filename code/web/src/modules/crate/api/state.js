@@ -49,13 +49,19 @@ export const crates = (state = cratesInitialState, action) => {
   }
 }
 
+
+//Depending on where we want to save the state of the style it will either be
+//saved on each crate or on the user itself. We have not decide yet. 
+// if we have the style saved on the crate it will live on the state of each crate.
+
 // Single crate
 
 // Initial State
 const crateInitialState = {
   isLoading: false,
   error: null,
-  item: {}
+  item: {},
+  // style: undefined
 }
 
 // State

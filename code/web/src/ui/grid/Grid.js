@@ -3,6 +3,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Component
+
+
+//This is a parent container of the GridCell component and maps over GridCell componanets to
+// render them inside the Grid.  
+
 const Grid = (props) => {
   const {
     children,
@@ -17,6 +22,8 @@ const Grid = (props) => {
     gutter,
     ...others
   } = props
+
+// this line right here maps over the children returning GridCells
 
   const GridCells = React.Children.map(children, (GridCell) => {
     if (!GridCell) {

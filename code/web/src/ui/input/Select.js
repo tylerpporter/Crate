@@ -6,6 +6,11 @@ import PropTypes from 'prop-types'
 import { grey2, grey4, black } from '../common/colors'
 
 // Component
+
+
+// Its possible we can use this component to help us with form filling as this appears to be a component that spits out a 
+// select html tag. maybe. 
+
 const Input = (props) => {
   const { children, fullWidth, ...other } = props
 

@@ -8,7 +8,12 @@ import { primary as primaryGradient, secondary as secondaryGradient } from '../c
 import { level1, level2, level3, level4 } from '../common/shadows'
 
 // Component
+
+// Button component is going to be used for our submit button for the style survey. 
+
 const Button = (props) => {
+
+  // Button takes props that are mostly related to ui behaviour and also onClick functionality.
   const { children, type, disabled, theme, ...other } = props
 
   return (

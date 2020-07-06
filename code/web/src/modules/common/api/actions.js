@@ -6,6 +6,12 @@ export const MESSAGE_SHOW = 'COMMON_MESSAGE_SHOW'
 export const MESSAGE_HIDE = 'COMMON_MESSAGE_HIDE'
 
 // Actions
+
+
+//Redux actions. This appears to be actions for showing a message on the screen. 
+// its possible we might use the messageShow and messageHide actions. 
+
+
 export function messageShow(message) {
   return { type: MESSAGE_SHOW, message }
 }

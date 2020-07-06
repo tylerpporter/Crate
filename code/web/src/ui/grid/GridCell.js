@@ -3,6 +3,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Component
+
+
+//This seems like a component that lets you separate items on the screen in a grid-like pattern. 
+//we might use it in the style survey component to align items properly. However it might not be totally needed.
+
 const GridCell = (props) => {
   const {
     children,

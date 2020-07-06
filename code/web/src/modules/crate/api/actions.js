@@ -12,6 +12,8 @@ export const CRATES_GET_LIST_FAILURE = 'CRATES/GET_LIST_FAILURE'
 export const CRATES_GET_REQUEST = 'CRATES/GET_REQUEST'
 export const CRATES_GET_RESPONSE = 'CRATES/GET_RESPONSE'
 export const CRATES_GET_FAILURE = 'CRATES/GET_FAILURE'
+// we will need an action type here for dealing with adding a style to the crate
+
 
 // Actions
 
@@ -113,6 +115,9 @@ export function create(variables) {
     }))
   }
 }
+
+// there will most likely have to be a function or we might be able to use
+//update function to change style on the crate. 
 
 // Update crate
 export function update(crate) {

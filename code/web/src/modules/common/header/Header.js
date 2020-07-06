@@ -19,6 +19,12 @@ import Menu from './Menu'
 import MenuItem from './MenuItem'
 
 // Component
+
+// This componenet hold all of the "NavBar" stuff. To me it appears that this component is rendered on every page and in pretty much ever case
+// I imagine we will need to either render this component when we go to our route or this might already be handled for us. 
+// being this is a parent component it renders other components in the "NavBar" including all the MenuItems to go to different parts of the site. 
+
+
 const Header = (props) => {
   return (
     <header style={{

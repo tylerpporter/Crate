@@ -17,6 +17,11 @@ import { messageShow, messageHide } from '../common/api/actions'
 import { remove, getListByUser } from '../subscription/api/actions'
 
 // Component
+
+
+
+// My understanding is that ITEM compoenent is a parent "interactive" container. 
+//This might be something we will base our StylePreferences component or maybe even reuse. 
 class Item extends PureComponent {
 
   constructor(props) {
@@ -67,6 +72,9 @@ class Item extends PureComponent {
     const { isLoading } = this.state
 
     return (
+
+      // Item componenet renders other components, in this case its Card, H4 and Button and Icon. 
+
       <Card style={{ width: '18em', backgroundColor: white }}>
         <p style={{ padding: '2em 3em 0 3em' }}>
           <img src={`${ APP_URL }/images/crate.png`} alt={ crate.name } style={{ width: '100%' }}/>

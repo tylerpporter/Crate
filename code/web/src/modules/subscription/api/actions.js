@@ -19,6 +19,11 @@ export const SUBSCRIPTIONS_GET_FAILURE = 'SUBSCRIPTIONS/GET_FAILURE'
 // Actions
 
 // Get list of subscriptions
+
+
+// This is the Redux actions "list" specific to the subscriptions component. I image we will need a similar 
+// setup for our StylePreference Component. 
+
 export function getList(isLoading = true) {
   return dispatch => {
     dispatch({
