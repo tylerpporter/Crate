@@ -16,3 +16,5 @@ module.exports = function(sequelize, DataTypes) {
 
   return Crate
 }
+
+// MODELS LIVE IN WITHIN THEIR RESOURCE FOLDER 

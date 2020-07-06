@@ -22,3 +22,5 @@ export const crateById = {
   },
   resolve: getById
 }
+
+// SEEM SIMILAR TO ROUTES

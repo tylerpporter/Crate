@@ -23,3 +23,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   })
 }
+
+// WHAT IS THE DIFFERENCE BETWEEN TEXT AND STRING

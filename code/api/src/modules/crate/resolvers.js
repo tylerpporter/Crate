@@ -54,3 +54,6 @@ export async function remove(parentValue, { id }, { auth }) {
     throw new Error('Operation denied.')
   }
 }
+
+// ACTUAL CODE TO INTERACT WITH DATABASE
+// CALLED IN QUERY JS
