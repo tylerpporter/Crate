@@ -17,6 +17,7 @@ import { logout } from './api/actions'
 
 // Component
 const Profile = (props) => (
+
   <div>
     {/* SEO */}
     <Helmet>
