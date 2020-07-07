@@ -10,8 +10,8 @@ export const userInitialState = {
   details: null
 }
 
-// State
-export default (state = userInitialState, action) => {
+// State - reducer
+export default (state = userInitialState, action) => { // type and payload
   switch (action.type) {
     case SET_USER:
       return {

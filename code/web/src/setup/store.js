@@ -12,6 +12,7 @@ import * as crate from "../modules/crate/api/state";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 // App Reducer
+// combine reducers combines into one state
 const appReducer = combineReducers({
   common,
   user,
