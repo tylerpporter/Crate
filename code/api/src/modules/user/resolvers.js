@@ -77,3 +77,15 @@ export async function remove(parentValue, { id }) {
 export async function getGenders() {
   return Object.values(params.user.gender)
 }
+
+// Update
+export async function update(parentValue, { id, name, stylePreference, email }, {}) {
+  const user = await models.User.findOne({ where: { id } })
+  return await user.update(
+    {
+      name,
+      stylePreference,
+      email
+    }
+  )
+}
