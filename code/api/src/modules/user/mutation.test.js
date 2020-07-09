@@ -14,6 +14,15 @@ describe("user mutations", () => {
       })
     );
   });
+  it('has a stylePreference colomn', async () => {
+    const response = await request(server)
+    .get('/')
+    .send({query: '{ user(id: 1) { id name stylePreference} }'})
+    .expect(200)
+
+    expect(response.body.data.user.stylePreference).toEqual(null)
+  })
+  
   it('updates a user', async () => {
     const response = await request(server)
     .post('/')
@@ -24,4 +33,5 @@ describe("user mutations", () => {
     expect(response.body.data.userUpdate.id).toEqual(2)
     expect(response.body.data.userUpdate.stylePreference).toEqual('casual')
   })
+
 })
