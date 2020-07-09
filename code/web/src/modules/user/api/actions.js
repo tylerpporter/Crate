@@ -70,51 +70,20 @@ export function login(userCredentials, isLoading = true) {
   };
 }
 
-export function updateStylePreference(id, stylePreference) {
-  // return (dispatch) => {
-  //   dispatch({
-  //     type: LOGIN_REQUEST,
-  //     isLoading,
-  //   });
-  console.log(id);
-  console.log(stylePreference);
+export function updateStylePreference(userDetails) {
+  console.log(userDetails);
 
-  return axios.post(
-    routeApi,
-    mutation({
-      operation: "userUpdate",
-      // variables: userCredentials,
-      fields: ["user {id, stylePreference}"],
-    })
-  );
+  return (dispatch) => {
+    return axios.post(
+      routeApi,
+      mutation({
+        operation: "userUpdate",
+        variables: userDetails,
+        fields: ["id", "stylePreference"],
+      })
+    );
+  };
 }
-//     .then((response) => {
-//       let error = "";
-
-//       if (response.data.errors && response.data.errors.length > 0) {
-//         error = response.data.errors[0].message;
-//       } else if (response.data.data.userLogin.token !== "") {
-//         const token = response.data.data.userLogin.token;
-//         const user = response.data.data.userLogin.user;
-
-//         dispatch(setUser(token, user));
-
-//         loginSetUserLocalStorageAndCookie(token, user);
-//       }
-
-//       dispatch({
-//         type: LOGIN_RESPONSE,
-//         error,
-//       });
-//     })
-//     .catch((error) => {
-//       dispatch({
-//         type: LOGIN_RESPONSE,
-//         error: "Please try again",
-//       });
-//     });
-// };
-// }
 
 // Set user token and info in localStorage and cookie
 export function loginSetUserLocalStorageAndCookie(token, user) {

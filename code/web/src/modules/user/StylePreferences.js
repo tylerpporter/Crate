@@ -29,7 +29,11 @@ class StylePreferences extends PureComponent {
     e.preventDefault();
     this.setState({ isLoading: true });
     let result = this.pointSystem();
-    this.props.updateStylePreference(this.props.user.details.id, result);
+    let userSummary = {
+      id: this.props.user.details.id,
+      stylePreference: result,
+    };
+    this.props.updateStylePreference(userSummary);
     alert(result);
   };
 
