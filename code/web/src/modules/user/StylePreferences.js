@@ -34,7 +34,6 @@ class StylePreferences extends PureComponent {
       stylePreference: result,
     };
     this.props.updateStylePreference(userSummary);
-    alert(result);
   };
 
   pointSystem = () => {

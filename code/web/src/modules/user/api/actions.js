@@ -11,6 +11,7 @@ export const LOGIN_REQUEST = "AUTH/LOGIN_REQUEST";
 export const LOGIN_RESPONSE = "AUTH/LOGIN_RESPONSE";
 export const SET_USER = "AUTH/SET_USER";
 export const LOGOUT = "AUTH/LOGOUT";
+export const UPDATE_STYLE = "UPDATE_STYLE";
 
 // Actions
 
@@ -71,17 +72,29 @@ export function login(userCredentials, isLoading = true) {
 }
 
 export function updateStylePreference(userDetails) {
-  console.log(userDetails);
-
   return (dispatch) => {
-    return axios.post(
-      routeApi,
-      mutation({
-        operation: "userUpdate",
-        variables: userDetails,
-        fields: ["id", "stylePreference"],
+    return axios
+      .post(
+        routeApi,
+        mutation({
+          operation: "userUpdate",
+          variables: userDetails,
+          fields: ["id", "stylePreference"],
+        })
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          dispatch({
+            type: UPDATE_STYLE,
+            payload: userDetails.stylePreference,
+          });
+        } else {
+          console.error(response);
+        }
       })
-    );
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 }
 
