@@ -29,6 +29,14 @@ class Item extends PureComponent {
     };
   }
 
+  determineSubscriptionPath = () => {
+    if (this.props.user.details === null) {
+      return userRoutes.style.path;
+    } else {
+      return userRoutes.subscriptions.path;
+    }
+  };
+
   onClickSubscribe = (crateId) => {
     this.setState({
       isLoading: true,
@@ -43,8 +51,8 @@ class Item extends PureComponent {
           this.props.messageShow(response.data.errors[0].message);
         } else {
           this.props.messageShow("Subscribed successfully.");
-
-          this.props.history.push(userRoutes.subscriptions.path);
+          // if user has no description, determineSubscription past goes to StylePrefences component to take style survey, else goes to user subscriptions
+          this.props.history.push(this.determineSubscriptionPath());
         }
       })
       .catch((error) => {
