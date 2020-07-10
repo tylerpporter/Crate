@@ -17,7 +17,8 @@ export const userInitialState = {
 };
 
 // State - reducer
-export default (state = userInitialState, action) => { // type and payload
+export default (state = userInitialState, action) => {
+  // type and payload
   switch (action.type) {
     case SET_USER:
       return {
@@ -49,6 +50,7 @@ export default (state = userInitialState, action) => { // type and payload
         details: null,
       };
 
+    // add UPDATE_STYLE action type to state
     case UPDATE_STYLE:
       const updatedDetails = state.details;
       updatedDetails.stylePreference = action.payload;

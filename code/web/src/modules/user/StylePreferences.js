@@ -13,34 +13,37 @@ import Icon from "../../ui/icon";
 import { updateStylePreference } from "./api/actions";
 import user from "../../setup/routes/user";
 
+// class component
 class StylePreferences extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      isComplete: false,
-      isLoading: false,
-      top: null,
+      isComplete: false, // checks if survey is complete
+      isLoading: false, // checks if component is loading
+      top: null, // if section of survey is complete
       dress: null,
       bottom: null,
     };
   }
 
+  // update survey event target value on change
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   onSubmit = (e) => {
-    e.preventDefault();
-    this.setState({ isLoading: true });
-    let result = this.pointSystem();
+    e.preventDefault(); // default action normally taken as a result of the event will not occur
+    this.setState({ isLoading: true }); // sets isLoading to true
+    let result = this.pointSystem(); // saves result to the return value of pointSystem fn
     let userSummary = {
       id: this.props.user.details.id,
       stylePreference: result,
-    };
-    this.props.updateStylePreference(userSummary);
-    this.setState({ isComplete: true });
+    }; // userSummary object to pass into updateStylePreference fn
+    this.props.updateStylePreference(userSummary); // invoke updateStylePreference fn
+    this.setState({ isComplete: true }); // sets isComplete to true
   };
 
+  // determines style based on survey results
   pointSystem = () => {
     let sum =
       Number(this.state.dress) +
@@ -58,6 +61,7 @@ class StylePreferences extends PureComponent {
   render() {
     return (
       <section>
+        {/* renders style survey if not complete */}
         {!this.state.isComplete && (
           <form onSubmit={this.onSubmit}>
             <H3>Dresses</H3>
@@ -139,7 +143,7 @@ class StylePreferences extends PureComponent {
             <label for="bottomProfessional">Professional</label>
             <div>
               <Button
-                type="submit"
+                type="submit" // onSubmit
                 theme="secondary"
                 disabled={this.state.isLoading}
               >
@@ -151,10 +155,12 @@ class StylePreferences extends PureComponent {
             </div>
           </form>
         )}
+        {/* renders results if survey is complete */}
         {this.state.isComplete && (
           <section>
             <H2>Your Style Is...</H2>
             <H3>{this.props.user.details.stylePreference}</H3>
+            {/* button links to user subscriptions */}
             <Link to={user.subscriptions.path}>
               <Button theme="secondary" style={{ marginTop: "1em" }}>
                 <Icon size={1.2} style={{ color: white }}></Icon>My

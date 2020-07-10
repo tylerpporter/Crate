@@ -29,8 +29,9 @@ class Item extends PureComponent {
     };
   }
 
+  // if user has no description, determineSubscription past goes to StylePrefences component to take style survey, else goes to user subscriptions
   determineSubscriptionPath = () => {
-    if (this.props.user.details === null) {
+    if (this.props.user.details.stylePreference === null) {
       return userRoutes.style.path;
     } else {
       return userRoutes.subscriptions.path;
@@ -51,7 +52,7 @@ class Item extends PureComponent {
           this.props.messageShow(response.data.errors[0].message);
         } else {
           this.props.messageShow("Subscribed successfully.");
-          // if user has no description, determineSubscription past goes to StylePrefences component to take style survey, else goes to user subscriptions
+          // invoke determineSubscriptionPath
           this.props.history.push(this.determineSubscriptionPath());
         }
       })

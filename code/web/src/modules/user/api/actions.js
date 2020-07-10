@@ -71,6 +71,7 @@ export function login(userCredentials, isLoading = true) {
   };
 }
 
+// update user.details.stylePreference after user completes style survey
 export function updateStylePreference(userDetails) {
   return (dispatch) => {
     return axios
