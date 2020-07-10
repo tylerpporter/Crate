@@ -22,6 +22,7 @@ class StylePreferences extends PureComponent {
       top: null,
       dress: null,
       bottom: null,
+      shoes: null
     };
   }
 
@@ -45,12 +46,13 @@ class StylePreferences extends PureComponent {
     let sum =
       Number(this.state.dress) +
       Number(this.state.top) +
-      Number(this.state.bottom);
-    if (sum <= 3) {
+      Number(this.state.bottom) +
+      Number(this.state.shoes);
+    if (sum <= 4) {
       return "Laidback";
-    } else if (sum === 4 || sum === 5 || sum === 6) {
+    } else if (sum === 5 || sum === 6 || sum === 7) {
       return "Smart Casual";
-    } else if (sum > 6) {
+    } else if (sum > 8) {
       return "Sophisticated";
     }
   };
@@ -137,6 +139,31 @@ class StylePreferences extends PureComponent {
               onChange={this.onChange}
             />
             <label for="bottomProfessional">Professional</label>
+            <H3>Shoes</H3>
+            <Input
+              type="radio"
+              id="shoesCasual"
+              name="shoes"
+              value="1"
+              onChange={this.onChange}
+            />
+            <label for="shoesCasual">Casual</label>
+            <Input
+              type="radio"
+              id="shoesStreet"
+              name="shoes"
+              value="2"
+              onChange={this.onChange}
+            />
+            <label for="shoesStreet">Street</label>
+            <Input
+              type="radio"
+              id="shoesProfessional"
+              name="shoes"
+              value="3"
+              onChange={this.onChange}
+            />
+            <label for="shoesProfessional">Professional</label>
             <div>
               <Button
                 type="submit"
