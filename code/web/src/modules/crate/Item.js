@@ -28,7 +28,7 @@ class Item extends PureComponent {
   }
 
   determineSubscriptionPath = () => {
-    if (this.props.user.details === null) {
+    if (this.props.user.details.stylePreference === null) {
       return userRoutes.style.path;
     } else {
       return userRoutes.subscriptions.path;
