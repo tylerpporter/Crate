@@ -12,7 +12,8 @@
     "build:client:prod": "webpack -p",
     "build:server:prod": "babel src -s -D -d build",
     "start:server:prod": " node build/index.js",
-    "storybook": "start-storybook -p 9000 -c storybook"
+    "storybook": "start-storybook -p 9000 -c storybook",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,9 @@
     "@testing-library/react": "^10.4.5",
     "babel-loader": "8.1.0",
     "dotenv-webpack": "^1.7.0",
+    "jest": "^26.1.0",
+    "jsdom": "^16.3.0",
+    "jsdom-global": "^3.0.2",
     "nodemon": "2.0.3",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11"
