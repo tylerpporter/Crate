@@ -16,10 +16,8 @@ Crate is an open source project where users can get monthly subscriptions of tre
 ### Desktop
 ![Crate Desktop](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/crate/desktop-all-with-link.png)
 
-## Wireframes
-![wireframe]()
-
 ## Style Survey Feature
+We added a feature that allows users to choose their style preferences before adding a monthly subscription to ensure they get clothes that match their personal style.
 ![survey gif](https://turingschool.slack.com/files/UNTKLHV2Q/F016WNNEUBX/style-preference.gif)
 
 ## Setup & Running
@@ -40,11 +38,11 @@ Crate is an open source project where users can get monthly subscriptions of tre
   - Run Webapp `cd web` and `npm start`, browse webapp at http://localhost:3000/
 
 ## Fork Contributors
-Demarcus Kirby
-Lauren Lucero
-Taras Tarlov
-Tim Nguyen
-Tyler Porter
+- Demarcus Kirby
+- Lauren Lucero
+- Taras Tarlov
+- Tim Nguyen
+- Tyler Porter
 
 ## Original Author
 - Atul Yadav - [GitHub](https://github.com/atulmy) · [Twitter](https://twitter.com/atulmy)
