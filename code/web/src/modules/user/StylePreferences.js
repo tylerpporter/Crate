@@ -12,7 +12,7 @@ import Icon from "../../ui/icon";
 import Tile from '../../ui/image/Tile'
 import { level1 } from '../../ui/common/shadows'
 import { Grid, GridCell } from '../../ui/grid'
-
+import { primary ,secondary } from '../../ui/common/fonts'
 //APP IMPORTS
 import { APP_URL } from '../../setup/config/env'
 
@@ -76,8 +76,9 @@ class StylePreferences extends PureComponent {
             
             {/* Casual */}
             <div style={{ display: 'flex', margin: '20px', alignItems: 'center'}}>
-            <H3>Dresses</H3>
+            <H3 style= {{fontFamily: secondary}}>Dresses</H3>
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
+              <label for="dressCasual" style={{textAlign: 'center'}}>
                 <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_casual.jpeg`} />
                 <Input
                   type="radio"
@@ -85,81 +86,100 @@ class StylePreferences extends PureComponent {
                   name="dress"
                   value="1"
                   onChange={this.onChange}
+                  style = {{margin:'1em', textAlign:'center'}}
                 />
-                <label for="dressCasual">Casual</label>
+                Casual</label>
               </div>
-              
 
               {/* Street */}
-              <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}} >
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_street.jpg`} />
-                <Input
-                  type="radio"
-                  id="dressStreet"
-                  name="dress"
-                  value="2"
-                  onChange={this.onChange}
-                />
-                <label for="dressStreet">Street</label>
-              </div>
+       
+                <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}} >
+                <label for="dressStreet" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_street.jpg`} />
+                  <Input
+                    type="radio"
+                    id="dressStreet"
+                    name="dress"
+                    value="2"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Street</label>
+                </div>
 
 
               {/* Professional */}
-              <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_professional.jpeg`} />
-                <Input
-                  type="radio"
-                  id="dressProfessional"
-                  name="dress"
-                  value="3"
-                  onChange={this.onChange}
-                />
-                <label for="dressProfessional">Professional</label>
-              </div>
+              
+   
+                <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
+                <label for="dressProfessional" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_professional.jpeg`} />
+                  <Input
+                    type="radio"
+                    id="dressProfessional"
+                    name="dress"
+                    value="3"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Professional</label>
+                </div>
+ 
             </div>
           </div>
     
           <div style={{ display: 'flex', flexDirection: 'column', margin: '20px'}}>
               
               {/* Casual */}
+   
               <div style={{ display: 'flex', alignItems: 'center', alignItems: 'center'}}>
-              <H3>Tops</H3>
+              <H3 style= {{fontFamily: secondary}}>Tops</H3>
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_casual.jpg`} />
-                <Input
-                  type="radio"
-                  id="topCasual"
-                  name="top"
-                  value="1"
-                  onChange={this.onChange}
-                />
-                <label for="topCasual">Casual</label>
+                  <label for="topCasual" style={{textAlign: 'center'}}>
+                    <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_casual.jpg`} />
+                    <Input
+                      type="radio"
+                      id="topCasual"
+                      name="top"
+                      value="1"
+                      onChange={this.onChange}
+                      style = {{margin:'1em', textAlign:'center'}}
+                    />
+                    Casual
+                  </label>
                 </div>
+               
 
                 {/* Street */}
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_street.jpg`} />
-                  <Input
-                    type="radio"
-                    id="topStreet"
-                    name="top"
-                    value="2"
-                    onChange={this.onChange}
-                  />
-                  <label for="topStreet">Street</label>
+                  <label for="topStreet" style={{textAlign: 'center'}}>
+                    <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_street.jpg`} />
+                      <Input
+                        type="radio"
+                        id="topStreet"
+                        name="top"
+                        value="2"
+                        onChange={this.onChange}
+                        style = {{margin:'1em', textAlign:'center'}}
+                      />
+                    Street
+                  </label>
                 </div>
 
                 {/* Professional */}
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_professional.jpg`} />
-                  <Input
-                    type="radio"
-                    id="topProfessional"
-                    name="top"
-                    value="3"
-                    onChange={this.onChange}
-                  />
-                  <label for="topProfessional">Professional</label>
+                  <label for="topProfessional" style={{textAlign: 'center'}}>
+                    <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_professional.jpg`} />
+                      <Input
+                        type="radio"
+                        id="topProfessional"
+                        name="top"
+                        value="3"
+                        onChange={this.onChange}
+                        style = {{margin:'1em', textAlign:'center'}}
+                      />
+                      Professional
+                  </label>
               </div>
             </div>
           </div>
@@ -168,43 +188,52 @@ class StylePreferences extends PureComponent {
             
             {/* Casual */}
             <div style={{ display: 'flex', alignItems: 'center'}}>
-            <H3>Bottoms</H3>
+            <H3 style= {{fontFamily: secondary}}>Bottoms</H3>
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_casual.jpg`} />
-                <Input
-                  type="radio"
-                  id="bottomCasual"
-                  name="bottom"
-                  value="1"
-                  onChange={this.onChange}
-                />
-                <label for="bottomCasual">Casual</label>
+                <label for="bottomCasual" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_casual.jpg`} />
+                  <Input
+                    type="radio"
+                    id="bottomCasual"
+                    name="bottom"
+                    value="1"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Casual
+                </label>
               </div>
               
               {/* Street */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_street.jpg`} />
-                <Input
-                  type="radio"
-                  id="bottomStreet"
-                  name="bottom"
-                  value="2"
-                  onChange={this.onChange}
-                />
-                <label for="bottomStreet">Street</label>
+                <label for="bottomStreet" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_street.jpg`} />
+                  <Input
+                    type="radio"
+                    id="bottomStreet"
+                    name="bottom"
+                    value="2"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Street
+                </label>
               </div>
               
               {/* Professional */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_professional.jpg`} />
-                <Input
-                  type="radio"
-                  id="bottomProfessional"
-                  name="bottom"
-                  value="3"
-                  onChange={this.onChange}
-                />
-                <label for="bottomProfessional">Professional</label>
+                <label for="bottomProfessional" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_professional.jpg`} />
+                  <Input
+                    type="radio"
+                    id="bottomProfessional"
+                    name="bottom"
+                    value="3"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Professional
+                </label>
               </div>
             </div>
           </div>
@@ -213,43 +242,52 @@ class StylePreferences extends PureComponent {
             
             {/* Casual */}
             <div style={{ display: 'flex', alignItems: 'center'}}>
-            <H3>Shoes</H3>
+            <H3 style= {{fontFamily: secondary}}>Shoes</H3>
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_casual.jpg`} />
-                <Input
-                  type="radio"
-                  id="shoesCasual"
-                  name="shoes"
-                  value="1"
-                  onChange={this.onChange}
-                />
-                <label for="shoesCasual">Casual</label>
+                <label for="shoesCasual" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_casual.jpg`} />
+                  <Input
+                    type="radio"
+                    id="shoesCasual"
+                    name="shoes"
+                    value="1"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Casual
+                </label>
               </div>
               
               {/* Street */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_street.jpg`} />
-                <Input
-                  type="radio"
-                  id="shoesStreet"
-                  name="shoes"
-                  value="2"
-                  onChange={this.onChange}
-                />
-                <label for="shoesStreet">Street</label>
+                <label for="shoesStreet" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_street.jpg`} />
+                  <Input
+                    type="radio"
+                    id="shoesStreet"
+                    name="shoes"
+                    value="2"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Street
+                </label>
               </div>
 
             {/* Professional */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_professional.jpg`} />
-                <Input
-                  type="radio"
-                  id="shoesProfessional"
-                  name="shoes"
-                  value="3"
-                  onChange={this.onChange}
-                />
-                <label for="shoesProfessional">Professional</label>
+                <label for="shoesProfessional" style={{textAlign: 'center'}}>
+                  <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_professional.jpg`} />
+                  <Input
+                    type="radio"
+                    id="shoesProfessional"
+                    name="shoes"
+                    value="3"
+                    onChange={this.onChange}
+                    style = {{margin:'1em', textAlign:'center'}}
+                  />
+                  Professional
+                </label>
               </div>
             </div>
           </div>
@@ -262,7 +300,6 @@ class StylePreferences extends PureComponent {
                 disabled={this.state.top === null || this.state.dress === null || this.state.bottom === null || this.state.isLoading}
               >
                 <Icon size={1.2} style={{ color: white }}>
-                  check
                 </Icon>
                 Save Preferences
               </Button>
