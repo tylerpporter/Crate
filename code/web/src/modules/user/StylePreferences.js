@@ -82,7 +82,7 @@ class StylePreferences extends PureComponent {
 
   render() {
     return (
-      <section style={{display:'flex', justifyContent: 'center', alignItems:'center', height: '100vh'}}>
+      <section style={{display:'flex', justifyContent: 'center', alignItems:'center'}}>
         {!this.state.isComplete && (
           <form onSubmit={this.onSubmit} style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'2em'}}>
           
@@ -330,10 +330,12 @@ class StylePreferences extends PureComponent {
             alignItems: 'center',
             boxShadow: level3, 
             width: '60%', 
-            height: '80%',}}>
+            height: '520px',
+            marginTop: '80px',
+            padding: '1.5em'}}>
             <H2>Your Style Is...</H2>
             <Tile style={{ boxShadow: level1}}  width={'50%'} height={'50%'} image={`${ APP_URL }/images/styles/style-results/${this.getStyleResult()}.jpg`} />
-            <H3 style={{fontFamily: secondary, fontSize: '8em'}}>{this.props.user.details.stylePreference}</H3>
+            <H3 style={{fontFamily: secondary, fontSize: '6em'}}>{this.props.user.details.stylePreference}</H3>
             <Link to={user.subscriptions.path}>
               <Button theme="secondary" style={{ marginTop: "1em"}}>
                 <Icon size={1.2} style={{ color: white }}></Icon>My
