@@ -20,7 +20,7 @@ import { APP_URL } from '../../setup/config/env'
 
 import { updateStylePreference } from "./api/actions";
 import user from "../../setup/routes/user";
-import { messageShow, messageHide } from '../common/api/actions'
+import { messageHide , messageShow} from '../common/api/actions'
 
 class StylePreferences extends PureComponent {
   constructor(props) {
@@ -48,7 +48,11 @@ class StylePreferences extends PureComponent {
       stylePreference: result,
     };
     this.props.updateStylePreference(userSummary);
-    this.setState({ isComplete: true });
+    this.setState({ isComplete: true, isLoading: false });
+    this.props.messageShow('Subscribed successfully.')
+    window.setTimeout(() => {
+        this.props.messageHide()
+      }, 3000)
   };
 
   pointSystem = () => {
@@ -68,7 +72,7 @@ class StylePreferences extends PureComponent {
 
   render() {
     return (
-      <section style={{display:'flex', justifyContent: 'center'}}>
+      <section style={{display:'flex', justifyContent: 'center', alignItems:'center', height: '100vh'}}>
         {!this.state.isComplete && (
           <form onSubmit={this.onSubmit} style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'2em'}}>
           
@@ -309,9 +313,17 @@ class StylePreferences extends PureComponent {
           </form>
         )}
         {this.state.isComplete && (
-          <section>
+          <section style={{
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            border: 'solid 1px red', 
+            width: '60%', 
+            height: '80%',}}>
             <H2>Your Style Is...</H2>
-            <H3>{this.props.user.details.stylePreference}</H3>
+            <Tile  width={'50%'} height={'50%'} image={`${ APP_URL }/images/styles/style-results/style_results_casual.jpg`} />
+            <H3 style={{fontFamily: secondary, fontSize: '8em'}}>{this.props.user.details.stylePreference}</H3>
             <Link to={user.subscriptions.path}>
               <Button theme="secondary" style={{ marginTop: "1em"}}>
                 <Icon size={1.2} style={{ color: white }}></Icon>My
@@ -332,6 +344,6 @@ function profileState(state) {
   };
 }
 
-export default connect(profileState, { updateStylePreference })(
+export default connect(profileState, { updateStylePreference, messageHide, messageShow })(
   StylePreferences
 );
