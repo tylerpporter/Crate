@@ -59,7 +59,7 @@ class StylePreferences extends PureComponent {
       return "Laidback";
     } else if (sum === 5 || sum === 6 || sum === 7) {
       return "Smart Casual";
-    } else if (sum > 8) {
+    } else if (sum >= 8) {
       return "Sophisticated";
     }
   };
@@ -297,7 +297,7 @@ class StylePreferences extends PureComponent {
               <Button
                 type="submit"
                 theme="secondary"
-                disabled={this.state.top === null || this.state.dress === null || this.state.bottom === null || this.state.isLoading}
+                disabled={this.state.top === null || this.state.dress === null || this.state.bottom === null || this.state.shoes === null || this.state.isLoading}
               >
                 <Icon size={1.2} style={{ color: white }}>
                 </Icon>
