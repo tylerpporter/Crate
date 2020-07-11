@@ -5,26 +5,7 @@ Crate is an open source project where users can get monthly subscriptions of tre
 - **WebApp** built with React and Redux along with Server Side Rendering (SSR) / SEO friendly
 - Written in ES6+ using Babel + Webpack
 
-## Features
-- Modular and easily scalable code structure
-- Emphasis on developer experience
-- UI components in separate folder which can be swapped for your favorite UI framework easily
-- GraphQL schema with associations
-- Database migration and data seeding
-- User authentication using JSON Web Tokens with GraphQL API
-- File upload feature with GraphQL
-- React storybook demonstrating UI components for web
-- Server side rendering
-- Multi-package setup and dev scripts for an automated dev experiance
-
-## Useful for
-- Developers with basic knowledge on React exploring advance React projects
-- Exploring GraphQL
-- Scalable project structure and code
-- Starter application for Web along with SSR
-- Multi-package scripts
-
-## Our Learning Goals
+## Project Learning Goals
 - Learn and apply strategies for understanding how to analyze a larger, existing code base
 - Apply strategies for reading and evaluating documentation
 - Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
@@ -33,8 +14,6 @@ Crate is an open source project where users can get monthly subscriptions of tre
 ## Screenshots and GIFs
 
 ### Desktop
-[IMAGE](https://github.com/atulmy/atulmy.github.io/blob/master/images/crate/desktop-all-with-link.png)
-
 ![Crate Desktop](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/crate/desktop-all-with-link.png)
 
 ## Wireframes
