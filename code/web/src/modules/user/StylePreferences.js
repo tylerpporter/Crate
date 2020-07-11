@@ -9,6 +9,13 @@ import Input from "../../ui/input/Input";
 import Button from "../../ui/button";
 import { white } from "../../ui/common/colors";
 import Icon from "../../ui/icon";
+import Tile from '../../ui/image/Tile'
+import { level1 } from '../../ui/common/shadows'
+import { Grid, GridCell } from '../../ui/grid'
+
+//APP IMPORTS
+import { APP_URL } from '../../setup/config/env'
+
 
 import { updateStylePreference } from "./api/actions";
 import user from "../../setup/routes/user";
@@ -62,109 +69,193 @@ class StylePreferences extends PureComponent {
       <section>
         {!this.state.isComplete && (
           <form onSubmit={this.onSubmit}>
+          
+          
+          <div style={{ display: 'flex', flexDirection: 'column'}}>
+            
             <H3>Dresses</H3>
-            <Input
-              type="radio"
-              id="dressCasual"
-              name="dress"
-              value="1"
-              onChange={this.onChange}
-            />
-            <label for="dressCasual">Casual</label>
-            <Input
-              type="radio"
-              id="dressStreet"
-              name="dress"
-              value="2"
-              onChange={this.onChange}
-            />
-            <label for="dressStreet">Street</label>
-            <Input
-              type="radio"
-              id="dressProfessional"
-              name="dress"
-              value="3"
-              onChange={this.onChange}
-            />
-            <label for="dressProfessional">Professional</label>
+            
+            {/* Casual */}
+            <div style={{ display: 'flex'}}>
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_casual.jpeg`} />
+                <Input
+                  type="radio"
+                  id="dressCasual"
+                  name="dress"
+                  value="1"
+                  onChange={this.onChange}
+                />
+                <label for="dressCasual">Casual</label>
+              </div>
+              
 
-            <H3>Tops</H3>
-            <Input
-              type="radio"
-              id="topCasual"
-              name="top"
-              value="1"
-              onChange={this.onChange}
-            />
-            <label for="topCasual">Casual</label>
-            <Input
-              type="radio"
-              id="topStreet"
-              name="top"
-              value="2"
-              onChange={this.onChange}
-            />
-            <label for="topStreet">Street</label>
-            <Input
-              type="radio"
-              id="topProfessional"
-              name="top"
-              value="3"
-              onChange={this.onChange}
-            />
-            <label for="topProfessional">Professional</label>
+              {/* Street */}
+              <div style={{ display: 'flex', flexDirection: 'column'}} >
+                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_street.jpg`} />
+                <Input
+                  type="radio"
+                  id="dressStreet"
+                  name="dress"
+                  value="2"
+                  onChange={this.onChange}
+                />
+                <label for="dressStreet">Street</label>
+              </div>
 
+
+              {/* Professional */}
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_professional.jpeg`} />
+                <Input
+                  type="radio"
+                  id="dressProfessional"
+                  name="dress"
+                  value="3"
+                  onChange={this.onChange}
+                />
+                <label for="dressProfessional">Professional</label>
+              </div>
+            </div>
+          </div>
+    
+          <div style={{ display: 'flex', flexDirection: 'column'}}>
+              <H3>Tops</H3>
+              
+              {/* Casual */}
+              <div style={{ display: 'flex'}}>
+                <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/tops/tops_casual.jpg`} />
+                <Input
+                  type="radio"
+                  id="topCasual"
+                  name="top"
+                  value="1"
+                  onChange={this.onChange}
+                />
+                <label for="topCasual">Casual</label>
+                </div>
+
+                {/* Street */}
+                <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/tops/tops_street.jpg`} />
+                  <Input
+                    type="radio"
+                    id="topStreet"
+                    name="top"
+                    value="2"
+                    onChange={this.onChange}
+                  />
+                  <label for="topStreet">Street</label>
+                </div>
+
+                {/* Professional */}
+                <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/tops/tops_professional.jpg`} />
+                  <Input
+                    type="radio"
+                    id="topProfessional"
+                    name="top"
+                    value="3"
+                    onChange={this.onChange}
+                  />
+                  <label for="topProfessional">Professional</label>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column'}}>
             <H3>Bottoms</H3>
-            <Input
-              type="radio"
-              id="bottomCasual"
-              name="bottom"
-              value="1"
-              onChange={this.onChange}
-            />
-            <label for="bottomCasual">Casual</label>
-            <Input
-              type="radio"
-              id="bottomStreet"
-              name="bottom"
-              value="2"
-              onChange={this.onChange}
-            />
-            <label for="bottomStreet">Street</label>
-            <Input
-              type="radio"
-              id="bottomProfessional"
-              name="bottom"
-              value="3"
-              onChange={this.onChange}
-            />
-            <label for="bottomProfessional">Professional</label>
+            
+            {/* Casual */}
+            <div style={{ display: 'flex'}}>
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/bottoms/bottoms_casual.jpg`} />
+                <Input
+                  type="radio"
+                  id="bottomCasual"
+                  name="bottom"
+                  value="1"
+                  onChange={this.onChange}
+                />
+                <label for="bottomCasual">Casual</label>
+              </div>
+              
+              {/* Street */}
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/bottoms/bottoms_street.jpg`} />
+                <Input
+                  type="radio"
+                  id="bottomStreet"
+                  name="bottom"
+                  value="2"
+                  onChange={this.onChange}
+                />
+                <label for="bottomStreet">Street</label>
+              </div>
+              
+              {/* Professional */}
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/bottoms/bottoms_professional.jpg`} />
+                <Input
+                  type="radio"
+                  id="bottomProfessional"
+                  name="bottom"
+                  value="3"
+                  onChange={this.onChange}
+                />
+                <label for="bottomProfessional">Professional</label>
+              </div>
+            </div>
+          </div>
+           
+          <div style={{ display: 'flex', flexDirection: 'column'}}>
             <H3>Shoes</H3>
-            <Input
-              type="radio"
-              id="shoesCasual"
-              name="shoes"
-              value="1"
-              onChange={this.onChange}
-            />
-            <label for="shoesCasual">Casual</label>
-            <Input
-              type="radio"
-              id="shoesStreet"
-              name="shoes"
-              value="2"
-              onChange={this.onChange}
-            />
-            <label for="shoesStreet">Street</label>
-            <Input
-              type="radio"
-              id="shoesProfessional"
-              name="shoes"
-              value="3"
-              onChange={this.onChange}
-            />
-            <label for="shoesProfessional">Professional</label>
+            
+            {/* Casual */}
+            <div style={{ display: 'flex'}}>
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/shoes/shoes_casual.jpg`} />
+                <Input
+                  type="radio"
+                  id="shoesCasual"
+                  name="shoes"
+                  value="1"
+                  onChange={this.onChange}
+                />
+                <label for="shoesCasual">Casual</label>
+              </div>
+              
+              {/* Street */}
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/shoes/shoes_street.jpg`} />
+                <Input
+                  type="radio"
+                  id="shoesStreet"
+                  name="shoes"
+                  value="2"
+                  onChange={this.onChange}
+                />
+                <label for="shoesStreet">Street</label>
+              </div>
+
+            {/* Professional */}
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <Tile  width={180} height={230} image={`${ APP_URL }/images/styles/shoes/shoes_professional.jpg`} />
+                <Input
+                  type="radio"
+                  id="shoesProfessional"
+                  name="shoes"
+                  value="3"
+                  onChange={this.onChange}
+                />
+                <label for="shoesProfessional">Professional</label>
+              </div>
+            </div>
+          </div>
             <div>
+             
+             
               <Button
                 type="submit"
                 theme="secondary"
