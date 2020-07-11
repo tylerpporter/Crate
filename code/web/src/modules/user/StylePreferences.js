@@ -13,12 +13,14 @@ import Tile from '../../ui/image/Tile'
 import { level1 } from '../../ui/common/shadows'
 import { Grid, GridCell } from '../../ui/grid'
 import { primary ,secondary } from '../../ui/common/fonts'
+
 //APP IMPORTS
 import { APP_URL } from '../../setup/config/env'
 
 
 import { updateStylePreference } from "./api/actions";
 import user from "../../setup/routes/user";
+import { messageShow, messageHide } from '../common/api/actions'
 
 class StylePreferences extends PureComponent {
   constructor(props) {
