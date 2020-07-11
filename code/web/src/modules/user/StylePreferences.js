@@ -94,7 +94,7 @@ class StylePreferences extends PureComponent {
             <div style={{ display: 'flex', margin: '20px', alignItems: 'center'}}>
             <H3 style= {{fontFamily: secondary}}>Dresses</H3>
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-              <label for="dressCasual" style={{textAlign: 'center'}}>
+              <label htmlFor="dressCasual" style={{textAlign: 'center'}}>
                 <Tile style={{ boxShadow: level1}}  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_casual.jpeg`} />
                 <Input
                   type="radio"
@@ -110,7 +110,7 @@ class StylePreferences extends PureComponent {
               {/* Street */}
        
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}} >
-                <label for="dressStreet" style={{textAlign: 'center'}}>
+                <label htmlFor="dressStreet" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}}  width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_street.jpg`} />
                   <Input
                     type="radio"
@@ -128,7 +128,7 @@ class StylePreferences extends PureComponent {
               
    
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="dressProfessional" style={{textAlign: 'center'}}>
+                <label htmlFor="dressProfessional" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/dresses/dresses_professional.jpeg`} />
                   <Input
                     type="radio"
@@ -151,7 +151,7 @@ class StylePreferences extends PureComponent {
               <div style={{ display: 'flex', alignItems: 'center', alignItems: 'center'}}>
               <H3 style= {{fontFamily: secondary}}>Tops</H3>
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                  <label for="topCasual" style={{textAlign: 'center'}}>
+                  <label htmlFor="topCasual" style={{textAlign: 'center'}}>
                     <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_casual.jpg`} />
                     <Input
                       type="radio"
@@ -168,7 +168,7 @@ class StylePreferences extends PureComponent {
 
                 {/* Street */}
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                  <label for="topStreet" style={{textAlign: 'center'}}>
+                  <label htmlFor="topStreet" style={{textAlign: 'center'}}>
                     <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_street.jpg`} />
                       <Input
                         type="radio"
@@ -184,7 +184,7 @@ class StylePreferences extends PureComponent {
 
                 {/* Professional */}
                 <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                  <label for="topProfessional" style={{textAlign: 'center'}}>
+                  <label htmlFor="topProfessional" style={{textAlign: 'center'}}>
                     <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/tops/tops_professional.jpg`} />
                       <Input
                         type="radio"
@@ -206,7 +206,7 @@ class StylePreferences extends PureComponent {
             <div style={{ display: 'flex', alignItems: 'center'}}>
             <H3 style= {{fontFamily: secondary}}>Bottoms</H3>
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="bottomCasual" style={{textAlign: 'center'}}>
+                <label htmlFor="bottomCasual" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_casual.jpg`} />
                   <Input
                     type="radio"
@@ -222,7 +222,7 @@ class StylePreferences extends PureComponent {
               
               {/* Street */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="bottomStreet" style={{textAlign: 'center'}}>
+                <label htmlFor="bottomStreet" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_street.jpg`} />
                   <Input
                     type="radio"
@@ -238,7 +238,7 @@ class StylePreferences extends PureComponent {
               
               {/* Professional */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="bottomProfessional" style={{textAlign: 'center'}}>
+                <label htmlFor="bottomProfessional" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/bottoms/bottoms_professional.jpg`} />
                   <Input
                     type="radio"
@@ -260,7 +260,7 @@ class StylePreferences extends PureComponent {
             <div style={{ display: 'flex', alignItems: 'center'}}>
             <H3 style= {{fontFamily: secondary}}>Shoes</H3>
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="shoesCasual" style={{textAlign: 'center'}}>
+                <label htmlFor="shoesCasual" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_casual.jpg`} />
                   <Input
                     type="radio"
@@ -276,7 +276,7 @@ class StylePreferences extends PureComponent {
               
               {/* Street */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="shoesStreet" style={{textAlign: 'center'}}>
+                <label htmlFor="shoesStreet" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_street.jpg`} />
                   <Input
                     type="radio"
@@ -292,7 +292,7 @@ class StylePreferences extends PureComponent {
 
             {/* Professional */}
               <div style={{ display: 'flex', flexDirection: 'column', margin: '20px', alignItems: 'center'}}>
-                <label for="shoesProfessional" style={{textAlign: 'center'}}>
+                <label htmlFor="shoesProfessional" style={{textAlign: 'center'}}>
                   <Tile style={{ boxShadow: level1}} width={300} height={300} image={`${ APP_URL }/images/styles/shoes/shoes_professional.jpg`} />
                   <Input
                     type="radio"
