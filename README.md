@@ -18,7 +18,8 @@ Crate is an open source project where users can get monthly subscriptions of tre
 
 ## Style Survey Feature
 We added a feature that allows users to choose their style preferences before adding a monthly subscription to ensure they get clothes that match their personal style.
-![survey gif](https://turingschool.slack.com/files/UNTKLHV2Q/F016WNNEUBX/style-preference.gif)
+
+![style-preference](https://user-images.githubusercontent.com/53014933/87314931-15c2e000-c4e1-11ea-892b-7f86d5284e35.gif)
 
 ## Setup & Running
 - Prerequisites
